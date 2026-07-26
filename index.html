@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Dasar MySQL Command Line</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Panduan Dasar MySQL</h1>
+      <p>Langkah-langkah instalasi dan perintah dasar pengelolaan database</p>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cari langkah atau perintah...">
+    </div>
+
+    <div class="step-list" id="stepList">
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">1</div>
+          <div class="step-title">Install MySQL Server dan Client</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">apt-get install mysql-server mysql-client</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">2</div>
+          <div class="step-title">Masuk ke MySQL</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">mysql -u root -p</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">3</div>
+          <div class="step-title">Melihat Database</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">show databases;</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">4</div>
+          <div class="step-title">Membuat Database Bernama "sekolah"</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">create database sekolah;</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">5</div>
+          <div class="step-title">Melihat Database (Memastikan terbuat)</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">show databases;</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">6</div>
+          <div class="step-title">Masuk ke Database "sekolah"</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">use sekolah;</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">7</div>
+          <div class="step-title">Membuat Tabel Bernama "siswa"</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">create table siswa (nis varchar(9), nama varchar(50), kelas varchar(15), alamat varchar(100));</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">8</div>
+          <div class="step-title">Melihat Tabel</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">show tables;</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">9</div>
+          <div class="step-title">Melihat Struktur Tabel</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">desc siswa;</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">10</div>
+          <div class="step-title">Mengisi Tabel (Insert Data)</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">insert into siswa VALUES ('242510753', 'Andi', 'XI TKJ', 'Bandung');</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">11</div>
+          <div class="step-title">Melihat Isi Tabel</div>
+        </div>
+        <div class="code-container">
+          <span class="code-text">select * from siswa;</span>
+          <button class="copy-btn">Copy</button>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Panduan MySQL. All Rights Reserved.</p>
+      <p class="watermark">Created by <span>Nico-Alexander</span> | Instagram: <a href="https://instagram.com/nico_alexander23" target="_blank">@nico_alexander23</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
