@@ -3,130 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panduan Dasar MySQL Command Line</title>
+  <title>Panduan MySQL Basic</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+  <div class="background-glow"></div>
+
   <div class="container">
     <header>
-      <h1>Panduan Dasar MySQL</h1>
-      <p>Langkah-langkah instalasi dan perintah dasar pengelolaan database</p>
+      <h1>MySQL & Network Setup</h1>
+      <p>Panduan basic pengelolaan database MySQL.</p>
     </header>
 
     <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Cari langkah atau perintah...">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" id="searchInput" placeholder="Cari langkah, perintah, atau kata kunci...">
     </div>
 
     <div class="step-list" id="stepList">
 
+      <!-- Section: MySQL Basics -->
+      <div class="section-title"><i class="fa-solid fa-database"></i> Part 1: Instalasi & Dasar MySQL</div>
+
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">1</div>
-          <div class="step-title">Install MySQL Server dan Client</div>
+          <div class="step-number">01</div>
+          <div class="step-title">Install MySQL Server & Client</div>
         </div>
         <div class="code-container">
-          <span class="code-text">apt-get install mysql-server mysql-client</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">apt-get install mysql-server mysql-client</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
+        <div class="note"><i class="fa-solid fa-circle-info"></i> Gunakan tanda hubung (-) pada paket nama apt Debian/Ubuntu.</div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">2</div>
+          <div class="step-number">02</div>
           <div class="step-title">Masuk ke MySQL</div>
         </div>
         <div class="code-container">
-          <span class="code-text">mysql -u root -p</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">mysql -u root -p</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">3</div>
+          <div class="step-number">03</div>
           <div class="step-title">Melihat Database</div>
         </div>
         <div class="code-container">
-          <span class="code-text">show databases;</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">show databases;</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">4</div>
-          <div class="step-title">Membuat Database Bernama "sekolah"</div>
+          <div class="step-number">04</div>
+          <div class="step-title">Membuat Database "sekolah"</div>
         </div>
         <div class="code-container">
-          <span class="code-text">create database sekolah;</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">create database sekolah;</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">5</div>
-          <div class="step-title">Melihat Database (Memastikan terbuat)</div>
+          <div class="step-number">05</div>
+          <div class="step-title">Verifikasi Database</div>
         </div>
         <div class="code-container">
-          <span class="code-text">show databases;</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">show databases;</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">6</div>
+          <div class="step-number">06</div>
           <div class="step-title">Masuk ke Database "sekolah"</div>
         </div>
         <div class="code-container">
-          <span class="code-text">use sekolah;</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">use sekolah;</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">7</div>
-          <div class="step-title">Membuat Tabel Bernama "siswa"</div>
+          <div class="step-number">07</div>
+          <div class="step-title">Membuat Tabel "siswa"</div>
         </div>
         <div class="code-container">
-          <span class="code-text">create table siswa (nis varchar(9), nama varchar(50), kelas varchar(15), alamat varchar(100));</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">create table siswa (nis varchar(9), nama varchar(50), kelas varchar(10), alamat varchar(100));</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">8</div>
+          <div class="step-number">08</div>
           <div class="step-title">Melihat Tabel</div>
         </div>
         <div class="code-container">
-          <span class="code-text">show tables;</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">show tables;</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
-          <div class="step-number">9</div>
+          <div class="step-number">09</div>
           <div class="step-title">Melihat Struktur Tabel</div>
         </div>
         <div class="code-container">
-          <span class="code-text">desc siswa;</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">desc siswa;</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
       <div class="step-card">
         <div class="step-header">
           <div class="step-number">10</div>
-          <div class="step-title">Mengisi Tabel (Insert Data)</div>
+          <div class="step-title">Mengisi Data Tabel (Insert)</div>
         </div>
         <div class="code-container">
-          <span class="code-text">insert into siswa values ('242510753','Andi','XI TKJ','Bandung');</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">insert into siswa values ('242510753', 'Alexandder', 'XII TKJ A', 'Bandung');</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
       </div>
 
@@ -136,16 +144,130 @@
           <div class="step-title">Melihat Isi Tabel</div>
         </div>
         <div class="code-container">
-          <span class="code-text">select * from siswa;</span>
-          <button class="copy-btn">Copy</button>
+          <code class="code-text">select * from siswa;</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
         </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">12</div>
+          <div class="step-title">Keluar dari MySQL</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">exit;</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+      </div>
+
+      <!-- Section: phpMyAdmin & Network -->
+      <div class="section-title"><i class="fa-solid fa-network-wired"></i> Part 2: phpMyAdmin & Host-Only Network</div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">13</div>
+          <div class="step-title">Install phpMyAdmin</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">apt-get install phpmyadmin</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">14</div>
+          <div class="step-title">Konfigurasi Network Interfaces Server</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">nano /etc/network/interfaces</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+        <div class="note">
+          <i class="fa-solid fa-circle-info"></i> Atur IP Static pada adapter server, contoh:<br>
+          <code>auto eth0</code><br>
+          <code>iface eth0 inet static</code><br>
+          <code>&nbsp;&nbsp;&nbsp;&nbsp;address 192.168.10.1/24</code><br>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">15</div>
+          <div class="step-title">Restart Service Networking</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">service networking restart</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+      </div>
+
+       <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">16</div>
+          <div class="step-title">Cek IP server</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">ifconfig</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">17</div>
+          <div class="step-title">Buka Network Connections Windows</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">ncpa.cpl</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+        <div class="note"><i class="fa-solid fa-circle-info"></i> Tekan <b>Win + R</b> di Windows, ketik perintah di atas lalu tekan Enter.</div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">18</div>
+          <div class="step-title">Atur IP Host-Only Network di Windows</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">IP: 192.168.10.2 | Netmask: 255.255.255.0 | Default gateway: 192.168.10.1</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+        <div class="note"><i class="fa-solid fa-circle-info"></i> Klik kanan VirtualBox Host-Only Network Adapter &rarr; Properties &rarr; Internet Protocol Version 4 (TCP/IPv4).</div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">19</div>
+          <div class="step-title">Tes Ping dari Windows (CMD) ke Server</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">ping 192.168.10.1</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-number">20</div>
+          <div class="step-title">Akses phpMyAdmin lewat Browser Windows</div>
+        </div>
+        <div class="code-container">
+          <code class="code-text">192.168.10.1/phpmyadmin</code>
+          <button class="copy-btn"><i class="fa-regular fa-copy"></i> Copy</button>
+        </div>
+        <div class="note"><i class="fa-solid fa-circle-info"></i> Buka Browser di Windows dan masukkan URL di atas. Masukkan username dan password database kamu.</div>
       </div>
 
     </div>
 
     <footer>
-      <p>&copy; 2026 Panduan MySQL. All Rights Reserved.</p>
-      <p class="watermark">Created by <span>Nico-Alexander</span> | Instagram: <a href="https://instagram.com/nico_alexander23" target="_blank">@nico_alexander23</a></p>
+      <div class="copyright">&copy; 2026 SysAdmin Reference. All Rights Reserved.</div>
+      <div class="watermark">
+        Designed by <span>Nico Alexander</span> &bull; 
+        <a href="https://instagram.com/nico_alexander23" target="_blank"><i class="fa-brands fa-instagram"></i> @nico_alexander23</a>
+      </div>
     </footer>
   </div>
 
